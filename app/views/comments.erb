@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Hacker News Clone 1</h1>
+  <ul>
+    <% @comments.each do |comment| %>
+      <li><a href="/users/<%= comment.user.id%>"><%= comment.user.name %></a> |
+          <a href="/users/<%= comment.post.url%>">link</a> |
+          <a href="/posts/<%= comment.post.id%>">parent</a><br/>
+          <p><%= comment.text %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>
